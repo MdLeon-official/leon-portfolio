@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon's Cyber Hub</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #00ff00;
+            font-family: 'Courier New', monospace;
+            overflow-x: hidden;
+            text-align: center;
+            position: relative;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+        }
+        .navbar {
+            background: #000;
+            padding: 10px 0;
+            border-bottom: 2px solid #00ff00;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+        .navbar a {
+            color: #00ff00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .section {
+            padding: 30px;
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px; /* Adjust for fixed navbar */
+        }
+        .section p {
+            width: 90%;
+            font-size: 16px;
+        }
+        .neon-text {
+            font-size: 36px;
+            text-align: center;
+            text-transform: uppercase;
+            animation: flicker 1.5s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { text-shadow: 0 0 10px #00ff00; }
+            50% { text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+            100% { text-shadow: 0 0 10px #00ff00; }
+        }
+        .neon-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            margin: 50px;
+            background: #000;
+            color: #00ff00;
+            border: 2px solid #00ff00;
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        .neon-btn:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        }
+        .skill-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .skill-item {
+            text-align: center;
+            padding: 15px;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            width: 120px;
+        }
+        .skill-item:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 0 10px #00ff00;
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .social-links a {
+            color: #00ff00;
+            margin: 0 12px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .social-links a:hover {
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .social-links a i{
+            font-size: 30px;
+        }
+        .about-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .about-image {
+            max-width: 35%;
+            height: auto;
+            border: 2px solid #00ff00;
+            border-radius: 8px;
+            transition: all 0.3s;
+            margin-right: 15px;
+        }
+        .about-image:hover {
+            background: #00ff00;
+            box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        }
+        .about-text {
+            max-width: 65%;
+            text-align: left;
+        }
+        @media (max-width: 768px) {
+            .section {
+                padding: 20px;
+                margin-top: 40px;
+            }
+            .neon-text {
+                font-size: 28px;
+            }
+            .neon-btn {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+            .skill-item {
+                width: 100px;
+                padding: 10px;
+            }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-image {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            .about-text {
+                max-width: 100%;
+                text-align: center;
+            }
+            .navbar a {
+                font-size: 14px;
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="v2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <!-- Navbar -->
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </div>
+
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <h1 class="neon-text">Hello, My name is MD. Leon Islam</h1>
+            <p>Computer Science student with a strong passion for cybersecurity. Actively involved in CTFs, bug bounty hunting, and learning web application security and ethical hacking. I focus on hands-on practice through platforms like TryHackMe, and enjoy exploring cryptography, secure coding, and vulnerability analysis. Dedicated to building real-world skills and contributing to a safer digital world.</p>
+            <a href="cv.pdf" download="Leon_CV.pdf" class="neon-btn">Download CV</a>
+            <!-- <a href="#projects" class="neon-btn">Hack Into Projects</a> -->
+            <div class="links">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/mdleonislam/" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/MdLeon-official" target="_blank"><i class='bx bxl-github' ></i></a>
+                </div>
+                <!-- <a href="#projects" class="neon-btn">Hack Into Projects</a> -->
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2 class="neon-text">About Me</h2>
+            <div class="about-container">
+                <img src="h1-removebg-preview.png" alt="Leon" class="about-image">
+                <div class="about-text">
+                    <p>I am Leon, a CSE student with a passion for cybersecurity, diving deep into securing systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="neon-text">Skills</h2>
+            <div class="skill-icon">
+                <div class="skill-item">Programming<br>Python, C++, JS</div>
+                <div class="skill-item">Cybersecurity<br>Pen Testing, Crypto</div>
+                <div class="skill-item">Tools<br>Wireshark, Metasploit</div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2 class="neon-text">Projects</h2>
+            <p>Explore my latest cybersecurity and programming projects.</p>
+            <a href="#" class="neon-btn">Network Intrusion Detection</a>
+            <div class="links"> - Python-based packet analysis tool</div>
+            <a href="#" class="neon-btn">Password Strength Analyzer</a>
+            <div class="links"> - JS web app for secure passwords</div>
+            <div class="links"><a href="https://github.com/leon" target="_blank" class="neon-btn">View All Projects</a></div>
+        </section>
+    </div>
+</body>
+</html>
